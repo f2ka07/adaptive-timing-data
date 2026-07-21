@@ -1,8 +1,6 @@
-# Adaptive timing validation data
+# Adaptive Execution Timing for Offline First Quorum Coordination in LoRa Mesh Networks
 
-Supporting data and analysis scripts for:
-
-**Adaptive Execution Timing for Offline First Quorum Coordination in LoRa Mesh Networks**
+Supporting validation data and analysis scripts for the accompanying preprint.
 
 Repository: https://github.com/f2ka07/adaptive-timing-data/
 
