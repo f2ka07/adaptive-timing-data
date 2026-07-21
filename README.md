@@ -2,7 +2,7 @@
 
 Supporting data and analysis scripts for:
 
-**A Cross Layer Adaptive Timing Framework for Quorum Coordination in Low Bitrate LoRa Mesh Networks**
+**Adaptive Execution Timing for Offline First Quorum Coordination in LoRa Mesh Networks**
 
 Repository: https://github.com/f2ka07/adaptive-timing-data/
 
@@ -101,7 +101,7 @@ Then regenerate figures with `make_results_figs_pdf.py` as above.
 
 If you use this dataset, please cite the accompanying preprint:
 
-> Kagai, F.; Branch, P.; But, J.; Allen, R. A Cross Layer Adaptive Timing Framework for Quorum Coordination in Low Bitrate LoRa Mesh Networks. *Preprints*, 2026. https://www.preprints.org/
+> Kagai, F.; Branch, P.; But, J.; Allen, R. Adaptive Execution Timing for Offline First Quorum Coordination in LoRa Mesh Networks. *Preprints*, 2026. https://www.preprints.org/
 
 ## License
 
