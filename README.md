@@ -99,9 +99,9 @@ Then regenerate figures with `make_results_figs_pdf.py` as above.
 
 ## Citation
 
-If you use this dataset, please cite the accompanying manuscript:
+If you use this dataset, please cite the accompanying preprint:
 
-> Kagai, F.; Branch, P.; But, J.; Allen, R. A Cross Layer Adaptive Timing Framework for Quorum Coordination in Low Bitrate LoRa Mesh Networks. *Telecom*, 2026.
+> Kagai, F.; Branch, P.; But, J.; Allen, R. A Cross Layer Adaptive Timing Framework for Quorum Coordination in Low Bitrate LoRa Mesh Networks. *Preprints*, 2026. https://www.preprints.org/
 
 ## License
 
