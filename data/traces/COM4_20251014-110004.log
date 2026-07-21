@@ -1,0 +1,169 @@
+#[2025-10-14 11:00:04.062] COM4 session start
+[2025-10-14 11:00:04.567] E
+[2025-10-14 11:00:04.573] RROR: Rounds 1-100 only
+
+[2025-10-14 11:00:05.077] [CREATEVOTE_CALLED] Function entry point reached
+[ALG4.1] OnReceiveVoteInit: A4_14778_5597
+[ALG4.1] Starting vote: A4_
+[2025-10-14 11:00:05.084] 1
+[2025-10-14 11:00:05.086] 4778_5597 deadline=24770 (fallback)
+[ALG4.1] No active vote - setting as active
+
+[2025-10-14 11:00:05.095] [
+[2025-10-14 11:00:05.098] VOTE] Binary vote created and sent: A4_14778_5597
+[QUEUE_DEBUG] Queuing TX: notBefore=14796, current=14801, delay=-6ms
+[2025-10-14 11:00:05.100] 
+[2025-10-14 11:00:05.101] 
+[VOTE_CREATE] finalizeDeadline=9310ms from start
+
+[2025-10-14 11:00:05.110] [
+[2025-10-14 11:00:05.112] ACTIVE_VOTE] Set active: A4_14778_5597
+[TX_DEBUG] Sending packet: len=120 opcode=0x2 nodeID[21]=0x41 nodeID[22]=0x04
+
+[2025-10-14 11:00:05.115] [
+[2025-10-14 11:00:05.117] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-14 11:00:05.121] [
+[2025-10-14 11:00:05.122] CONSENSUS_STATE] Vote A4_14778_5597 signature count: 0 -> 1
+
+#[2025-10-14 11:00:06.125] heartbeat
+[2025-10-14 11:00:06.306] [
+[2025-10-14 11:00:06.310] LORA_QUEUE] TX done at 16012 -> RX
+
+#[2025-10-14 11:00:08.178] heartbeat
+[2025-10-14 11:00:08.967] [
+[2025-10-14 11:00:08.972] LORA_RX_RAW] 78B opcode=0x7 RSSI=-24 from=œ73
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=
+[2025-10-14 11:00:08.975] NEW(78B)
+[PKT_RX] Signature matched to vote: A4_14778_5597, from node: A3
+
+[2025-10-14 11:00:09.139] [
+[2025-10-14 11:00:09.140] PKT_RX] Signature processed successfully: vote=A4_14778_5597, from=A3, total_voters=2
+[CONSENSUS_PROGRESS] 2/4 participants, age 4s
+[2025-10-14 11:00:09.145] [
+[2025-10-14 11:00:09.146] CONSENSUS_STATE] Vote A4_14778_5597 signature count: 1 -> 2
+
+#[2025-10-14 11:00:10.207] heartbeat
+[2025-10-14 11:00:10.281] [
+[2025-10-14 11:00:10.287] LORA_RX_RAW] 78B opcode=0x7 RSSI=-26 from=ú164
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format
+[2025-10-14 11:00:10.292] =NEW(78B)
+[PKT_RX] Signature matched to vote: A4_14778_5597, from node: A5
+
+[2025-10-14 11:00:10.453] [
+[2025-10-14 11:00:10.457] CONSENSUS] BFT threshold reached (3/4) for A4_14778_5597 at 5348ms - starting perfect window for 4/4 (1000ms window)
+[
+[2025-10-14 11:00:10.461] P
+[2025-10-14 11:00:10.465] KT_RX] Signature processed successfully: vote=A4_14778_5597, from=A5, total_voters=3
+
+[2025-10-14 11:00:10.469] [CONSENSUS_STATE] Vote A4_14778_5597 signature count: 2 -> 3
+
+[2025-10-14 11:00:10.473] [CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-14 11:00:11.449] [
+[2025-10-14 11:00:11.454] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_14778_5597
+
+[2025-10-14 11:00:11.521] [
+[2025-10-14 11:00:11.523] LORA_RX_RAW] 78B opcode=0x7 RSSI=-50 from=179
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format
+[2025-10-14 11:00:11.528] =
+[2025-10-14 11:00:11.531] NEW(78B)
+[PKT_RX] Signature matched to vote: A4_14778_5597, from node: A6
+
+[2025-10-14 11:00:11.694] [
+[2025-10-14 11:00:11.701] PERFECT_4_4] A4_14778_5597 finalized in 6589ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS] A4_14778_5597 â€“ sign
+[2025-10-14 11:00:11.707] atures: 4/4 | quorumType: 0xf1
+[PKT_RX] Signature processed successfully: vote=A4_14778_5597, from=A6, total_voters=4
+
+[2025-10-14 11:00:11.711] [CONSENSUS_STATE] Vote A4_14778_5597 signature count: 3 -> 4
+
+#[2025-10-14 11:00:12.269] heartbeat
+#[2025-10-14 11:00:14.328] heartbeat
+[2025-10-14 11:00:14.414] [
+[2025-10-14 11:00:14.417] ALG4.1] Deadline reached for vote: A4_14778_5597
+[ALG4.1] Timeout on first attempt - FINISHING (retry disabled)
+[ALG4
+[2025-10-14 11:00:14.425] .
+[2025-10-14 11:00:14.426] 1] Timeout on retry attempt - GIVING UP
+[ALG4.1] FinalizeVotePublish: A4_14778_5597
+[ALG4.1] Finishing vote: A4_14778
+[2025-10-14 11:00:14.435] _
+[2025-10-14 11:00:14.438] 5597
+[DEADLINE_CLEANUP] Vote A4_14778_5597 removed
+[CLEANUP] Cleared vote state: A4_14778_5597
+[CLEANUP] Reset vote indices: A4_14778_5597
+
+#[2025-10-14 11:00:14.462] COM4 CLEANUP_COUNT=1
+[2025-10-14 11:00:16.138] [
+[2025-10-14 11:00:16.141] CONSENSUS_TIMEOUT] Vote A4_14778_5597 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_14778_55
+[2025-10-14 11:00:16.149] 9
+[2025-10-14 11:00:16.152] 7,timestamp_ms=25849,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=11051
+[CLEANUP_SKIP] Already cleaned: A4_14778_5597
+
+#[2025-10-14 11:00:16.339] heartbeat
+[2025-10-14 11:00:16.993] [
+[2025-10-14 11:00:16.997] CREATEVOTE_CALLED] Function entry point reached
+[ALG4.1] OnReceiveVoteInit: A4_26697_6343
+[ALG4.1] Starting vote: A4_
+[2025-10-14 11:00:17.000] 2
+[2025-10-14 11:00:17.003] 6697_6343 deadline=36688 (fallback)
+[ALG4.1] No active vote - setting as active
+
+[2025-10-14 11:00:17.011] [
+[2025-10-14 11:00:17.013] VOTE] Binary vote created and sent: A4_26697_6343
+[QUEUE_DEBUG] Queuing TX: notBefore=26715, current=26720, delay=-6ms
+[2025-10-14 11:00:17.016] 
+[2025-10-14 11:00:17.018] 
+[VOTE_CREATE] finalizeDeadline=9310ms from start
+
+[2025-10-14 11:00:17.027] [
+[2025-10-14 11:00:17.029] ACTIVE_VOTE] Set active: A4_26697_6343
+[TX_DEBUG] Sending packet: len=120 opcode=0x2 nodeID[21]=0x41 nodeID[22]=0x04
+
+[2025-10-14 11:00:17.032] [
+[2025-10-14 11:00:17.033] LORA_QUEUE] TX started (non-blocking)
+
+#[2025-10-14 11:00:18.400] heartbeat
+#[2025-10-14 11:00:20.401] heartbeat
+#[2025-10-14 11:00:22.457] heartbeat
+#[2025-10-14 11:00:24.515] heartbeat
+#[2025-10-14 11:00:26.517] heartbeat
+#[2025-10-14 11:00:28.579] heartbeat
+#[2025-10-14 11:00:30.637] heartbeat
+#[2025-10-14 11:00:32.687] heartbeat
+#[2025-10-14 11:00:34.748] heartbeat
+#[2025-10-14 11:00:36.799] heartbeat
+#[2025-10-14 11:00:38.854] heartbeat
+#[2025-10-14 11:00:40.910] heartbeat
+#[2025-10-14 11:00:42.969] heartbeat
+#[2025-10-14 11:00:45.024] heartbeat
+#[2025-10-14 11:00:47.074] heartbeat
+#[2025-10-14 11:00:49.130] heartbeat
+#[2025-10-14 11:00:51.188] heartbeat
+#[2025-10-14 11:00:53.190] heartbeat
+#[2025-10-14 11:00:55.251] heartbeat
+#[2025-10-14 11:00:57.306] heartbeat
+#[2025-10-14 11:00:59.361] heartbeat
+#[2025-10-14 11:01:01.411] heartbeat
+#[2025-10-14 11:01:03.462] heartbeat
+#[2025-10-14 11:01:05.521] heartbeat
+#[2025-10-14 11:01:07.582] heartbeat
+#[2025-10-14 11:01:09.584] heartbeat
+#[2025-10-14 11:01:11.585] heartbeat
+#[2025-10-14 11:01:13.586] heartbeat
+#[2025-10-14 11:01:15.647] heartbeat
+#[2025-10-14 11:01:17.703] heartbeat
+#[2025-10-14 11:01:19.763] heartbeat
+#[2025-10-14 11:01:21.766] heartbeat
+#[2025-10-14 11:01:23.767] heartbeat
+#[2025-10-14 11:01:25.827] heartbeat
+#[2025-10-14 11:01:27.883] heartbeat
+#[2025-10-14 11:01:29.943] heartbeat
+#[2025-10-14 11:01:32.003] heartbeat
+#[2025-10-14 11:01:34.005] heartbeat
+#[2025-10-14 11:01:36.062] heartbeat
+#[2025-10-14 11:01:38.116] heartbeat
+#[2025-10-14 11:01:40.178] heartbeat
+#[2025-10-14 11:01:41.647] COM4 session end

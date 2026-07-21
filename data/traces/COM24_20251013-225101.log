@@ -1,0 +1,1533 @@
+#[2025-10-13 22:51:01.870] COM24 session start
+[2025-10-13 22:51:01.875] LORA_ACTIVITY: 2 packets/30s
+
+[2025-10-13 22:51:02.384] [
+[2025-10-13 22:51:02.390] EXPERIMENT_MODE] Enabled - quiet mode ON
+EXP_START: Rounds=100, Delay=3s, Tokens=206 [UPDATES.md compliant]
+[EXPERIME
+[2025-10-13 22:51:02.397] NT] Features enabled:
+  - Automatic round triggering
+  - All votes saved (success/fail)
+  - Outcome tracking (BFT/CFT
+[2025-10-13 22:51:02.404] /
+[2025-10-13 22:51:02.411] Message)
+  - Watchdog reset between rounds
+  - CSV metrics (14-column format)
+Starting 100 rounds
+[TX_DIAG] votePool.size=0 scheduled=0
+
+[2025-10-13 22:51:03.661] [
+[2025-10-13 22:51:03.663] LORA_RX_RAW] 120B opcode=0x2 RSSI=-32 from=A4
+
+[2025-10-13 22:51:03.672] [
+[2025-10-13 22:51:03.675] Binary] Processed vote from A4: A4_170212_5353
+[METRIC] event=vote_received,from=A4,vote_id=A4_170212_5353,timestamp_m
+[2025-10-13 22:51:03.679] s=92303,toa_actual_ms=9922091
+[TIMING] VOTE_RECEIVE_A4: 194 us
+
+[2025-10-13 22:51:03.685] [
+[2025-10-13 22:51:03.688] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='0' balance=90 RETURNING FALSE
+
+[2025-10-13 22:51:03.801] [
+[2025-10-13 22:51:03.804] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:51:03.812] d
+[2025-10-13 22:51:03.814] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_170212_5353 ourBalance=206
+
+[2025-10-13 22:51:03.817] [
+[2025-10-13 22:51:03.818] SIG_OK] Signature created, length=88
+
+[2025-10-13 22:51:03.828] [
+[2025-10-13 22:51:03.829] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_170212_5353, nodeID=A3, format=VALI
+[2025-10-13 22:51:03.838] D
+[2025-10-13 22:51:03.840] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:51:03.849] ]
+[2025-10-13 22:51:03.850]  Node A3 assigned slot 1 at absolute time 93946 (current: 92474, wait: 1472ms)
+[SIG_SCHEDULED] Vote A4_170212_5353 sig
+[2025-10-13 22:51:03.853] n
+[2025-10-13 22:51:03.857] ature scheduled for slot 1 at time 93934 (wait: 1460ms)
+
+#[2025-10-13 22:51:03.919] heartbeat
+[2025-10-13 22:51:05.303] [
+[2025-10-13 22:51:05.306] SIG_TX] Sending scheduled signature for vote A4_170212_5353
+
+[2025-10-13 22:51:05.314] [
+[2025-10-13 22:51:05.315] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_170212_5353, nodeID=A3, format=VALI
+[2025-10-13 22:51:05.324] D
+[2025-10-13 22:51:05.325] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_170212_5353, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:51:05.335] i
+[2025-10-13 22:51:05.337] ng TX: notBefore=93959, current=93963, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signatur
+[2025-10-13 22:51:05.338] e transmitted via LoRa
+
+[2025-10-13 22:51:05.348] [
+[2025-10-13 22:51:05.350] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0xb2 nodeID[22]=0xcb
+
+[2025-10-13 22:51:05.354] [
+[2025-10-13 22:51:05.356] LORA_QUEUE] TX started (non-blocking)
+
+#[2025-10-13 22:51:05.972] heartbeat
+[2025-10-13 22:51:06.217] [
+[2025-10-13 22:51:06.220] LORA_QUEUE] TX done at 94850 -> RX
+
+[2025-10-13 22:51:06.692] [
+[2025-10-13 22:51:06.694] CONSENSUS_STATE] Vote A4_170212_5353 signature count: 0 -> 2
+
+[2025-10-13 22:51:07.412] [
+[2025-10-13 22:51:07.415] TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:51:07.582] [
+[2025-10-13 22:51:07.587] LORA_RX_RAW] 78B opcode=0x7 RSSI=-5 from=Ô38
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:51:07.590] EW(78B)
+[PKT_RX] Signature matched to vote: A4_170212_5353, from node: A5
+
+[2025-10-13 22:51:07.705] [
+[2025-10-13 22:51:07.708] CONSENSUS] BFT threshold reached (3/4) for  at 4012ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:51:07.711] t
+[2025-10-13 22:51:07.714] ure processed successfully: vote=A4_170212_5353, from=A5, total_voters=3
+
+[2025-10-13 22:51:07.717] [
+[2025-10-13 22:51:07.719] CONSENSUS_STATE] Vote A4_170212_5353 signature count: 2 -> 3
+
+[2025-10-13 22:51:07.723] [
+[2025-10-13 22:51:07.725] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+#[2025-10-13 22:51:07.979] heartbeat
+[2025-10-13 22:51:08.702] [
+[2025-10-13 22:51:08.705] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_170212_5353
+
+[2025-10-13 22:51:08.818] [
+[2025-10-13 22:51:08.820] LORA_RX_RAW] 78B opcode=0x7 RSSI=-5 from=:49
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:51:08.824] E
+[2025-10-13 22:51:08.827] W(78B)
+[PKT_RX] Signature matched to vote: A4_170212_5353, from node: A6
+
+[2025-10-13 22:51:08.941] [
+[2025-10-13 22:51:08.942] PERFECT_4_4]  finalized in 5246ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:51:08.949] 0
+[2025-10-13 22:51:08.951] xf1
+[PKT_RX] Signature processed successfully: vote=A4_170212_5353, from=A6, total_voters=4
+
+[2025-10-13 22:51:08.955] [
+[2025-10-13 22:51:08.956] CONSENSUS_STATE] Vote A4_170212_5353 signature count: 3 -> 4
+
+#[2025-10-13 22:51:10.013] heartbeat
+#[2025-10-13 22:51:12.069] heartbeat
+[2025-10-13 22:51:12.142] [
+[2025-10-13 22:51:12.144] CONSENSUS_TIMEOUT] Vote A4_170212_5353 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_170212_
+[2025-10-13 22:51:12.152] 5
+[2025-10-13 22:51:12.154] 353,timestamp_ms=100773,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8462
+[DEADLINE_CLEANUP] Vote A4_170212_535
+#[2025-10-13 22:51:12.155] COM24 CLEANUP_COUNT=1
+[2025-10-13 22:51:12.161] 3
+[2025-10-13 22:51:12.163]  removed
+[CLEANUP] Cleared vote state: A4_170212_5353
+[CLEANUP] Reset vote indices: A4_170212_5353
+
+[2025-10-13 22:51:12.419] [
+[2025-10-13 22:51:12.420] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:51:14.090] heartbeat
+#[2025-10-13 22:51:16.144] heartbeat
+[2025-10-13 22:51:16.673] [
+[2025-10-13 22:51:16.674] FORCE_CLEANUP] Vote A4_170212_5353 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_170212_5353
+
+[2025-10-13 22:51:16.684] [
+[2025-10-13 22:51:16.686] POOL_CLEANUP] Vote removed from pool: A4_170212_5353
+[SESSION_CLEANUP] Session removed: A4_170212_5353
+[CLEANUP_SKIP]
+[2025-10-13 22:51:16.695]  
+[2025-10-13 22:51:16.696] Already cleaned: A4_170212_5353
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:51:16.701]  
+[2025-10-13 22:51:16.702] ended at 105320 - UDP bypass continues if manually activated
+
+[2025-10-13 22:51:17.425] [
+[2025-10-13 22:51:17.426] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:51:18.173] heartbeat
+[2025-10-13 22:51:18.488] [
+[2025-10-13 22:51:18.493] LORA_RX_RAW] 120B opcode=0x2 RSSI=-32 from=A4
+
+[2025-10-13 22:51:18.498] [
+[2025-10-13 22:51:18.501] Binary] Processed vote from A4: A4_185040_3394
+[METRIC] event=vote_received,from=A4,vote_id=A4_185040_3394,timestamp_m
+[2025-10-13 22:51:18.505] s=107114,toa_actual_ms=9922074
+[TIMING] VOTE_RECEIVE_A4: 198 us
+
+[2025-10-13 22:51:18.512] [
+[2025-10-13 22:51:18.515] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='1' balance=90 RETURNING FALSE
+
+[2025-10-13 22:51:18.629] [
+[2025-10-13 22:51:18.634] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:51:18.639] d
+[2025-10-13 22:51:18.642] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_185040_3394 ourBalance=206
+
+[2025-10-13 22:51:18.645] [SIG_OK] Signature created, length=88
+
+[2025-10-13 22:51:18.654] [
+[2025-10-13 22:51:18.658] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_185040_3394, nodeID=A3, format=VALI
+[2025-10-13 22:51:18.665] D
+[2025-10-13 22:51:18.666] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:51:18.675] ]
+[2025-10-13 22:51:18.678]  Node A3 assigned slot 1 at absolute time 108756 (current: 107285, wait: 1471ms)
+[SIG_SCHEDULED] Vote A4_185040_3394 s
+[2025-10-13 22:51:18.681] ignature scheduled for slot 1 at time 108770 (wait: 1485ms)
+
+[2025-10-13 22:51:20.155] [
+[2025-10-13 22:51:20.157] SIG_TX] Sending scheduled signature for vote A4_185040_3394
+
+[2025-10-13 22:51:20.165] [
+[2025-10-13 22:51:20.168] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_185040_3394, nodeID=A3, format=VALI
+[2025-10-13 22:51:20.176] D
+#[2025-10-13 22:51:20.179] heartbeat
+[2025-10-13 22:51:20.181] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_185040_3394, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:51:20.187] i
+[2025-10-13 22:51:20.189] ng TX: notBefore=108794, current=108799, delay=-6ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:51:20.200] [
+[2025-10-13 22:51:20.203] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -15ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x4a nodeID[22]=0xfd
+
+[2025-10-13 22:51:20.206] [
+[2025-10-13 22:51:20.209] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:51:21.068] [
+[2025-10-13 22:51:21.072] LORA_QUEUE] TX done at 109686 -> RX
+
+[2025-10-13 22:51:21.514] [
+[2025-10-13 22:51:21.515] CONSENSUS_STATE] Vote A4_185040_3394 signature count: 0 -> 2
+
+#[2025-10-13 22:51:22.199] heartbeat
+[2025-10-13 22:51:22.392] [
+[2025-10-13 22:51:22.396] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=016
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:51:22.400] EW(78B)
+[PKT_RX] Signature matched to vote: A4_185040_3394, from node: A5
+
+[2025-10-13 22:51:22.514] [
+[2025-10-13 22:51:22.519] CONSENSUS] BFT threshold reached (3/4) for  at 3995ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:51:22.524] t
+[2025-10-13 22:51:22.527] ure processed successfully: vote=A4_185040_3394, from=A5, total_voters=3
+[TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:51:22.530] [CONSENSUS_STATE] Vote A4_185040_3394 signature count: 2 -> 3
+
+[2025-10-13 22:51:22.537] [
+[2025-10-13 22:51:22.540] CONSENSUS_DEATH_FIX] Consensus stuck for 14s - forcing cleanup to prevent system death
+
+[2025-10-13 22:51:22.543] [
+[2025-10-13 22:51:22.545] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-13 22:51:23.510] [
+[2025-10-13 22:51:23.513] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_185040_3394
+
+[2025-10-13 22:51:23.594] [
+[2025-10-13 22:51:23.599] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=Ü7
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=NE
+[2025-10-13 22:51:23.602] W(78B)
+[PKT_RX] Signature matched to vote: A4_185040_3394, from node: A6
+
+[2025-10-13 22:51:23.717] [
+[2025-10-13 22:51:23.723] PERFECT_4_4]  finalized in 5197ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:51:23.727] 0xf1
+[PKT_RX] Signature processed successfully: vote=A4_185040_3394, from=A6, total_voters=4
+
+[2025-10-13 22:51:23.731] [
+[2025-10-13 22:51:23.734] CONSENSUS_STATE] Vote A4_185040_3394 signature count: 3 -> 4
+
+#[2025-10-13 22:51:24.238] heartbeat
+#[2025-10-13 22:51:26.293] heartbeat
+[2025-10-13 22:51:27.159] [
+[2025-10-13 22:51:27.162] CONSENSUS_TIMEOUT] Vote A4_185040_3394 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_185040_
+[2025-10-13 22:51:27.169] 3
+[2025-10-13 22:51:27.170] 394,timestamp_ms=115774,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8653
+[DEADLINE_CLEANUP] Vote A4_185040_339
+#[2025-10-13 22:51:27.172] COM24 CLEANUP_COUNT=2
+[2025-10-13 22:51:27.179] 4
+[2025-10-13 22:51:27.179]  removed
+[CLEANUP] Cleared vote state: A4_185040_3394
+[CLEANUP] Reset vote indices: A4_185040_3394
+
+[2025-10-13 22:51:27.529] [
+[2025-10-13 22:51:27.531] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:51:28.330] heartbeat
+#[2025-10-13 22:51:30.386] heartbeat
+[2025-10-13 22:51:31.406] L
+[2025-10-13 22:51:31.408] ORA_ACTIVITY: 6 packets/30s
+
+[2025-10-13 22:51:31.498] [
+[2025-10-13 22:51:31.501] FORCE_CLEANUP] Vote A4_185040_3394 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_185040_3394
+
+[2025-10-13 22:51:31.511] [
+[2025-10-13 22:51:31.514] POOL_CLEANUP] Vote removed from pool: A4_185040_3394
+[SESSION_CLEANUP] Session removed: A4_185040_3394
+[CLEANUP_SKIP]
+[2025-10-13 22:51:31.521]  
+[2025-10-13 22:51:31.522] Already cleaned: A4_185040_3394
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:51:31.526]  
+[2025-10-13 22:51:31.529] ended at 120130 - UDP bypass continues if manually activated
+
+#[2025-10-13 22:51:32.396] heartbeat
+[2025-10-13 22:51:32.536] [
+[2025-10-13 22:51:32.538] TX_DIAG] votePool.size=0 scheduled=0
+
+[2025-10-13 22:51:33.522] [
+[2025-10-13 22:51:33.524] LORA_RX_RAW] 120B opcode=0x2 RSSI=-31 from=A4
+
+[2025-10-13 22:51:33.532] [
+[2025-10-13 22:51:33.535] Binary] Processed vote from A4: A4_200077_9462
+[METRIC] event=vote_received,from=A4,vote_id=A4_200077_9462,timestamp_m
+[2025-10-13 22:51:33.539] s=122133,toa_actual_ms=9922056
+[TIMING] VOTE_RECEIVE_A4: 199 us
+
+[2025-10-13 22:51:33.546] [
+[2025-10-13 22:51:33.548] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='2' balance=90 RETURNING FALSE
+
+[2025-10-13 22:51:33.664] [
+[2025-10-13 22:51:33.666] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:51:33.674] d
+[2025-10-13 22:51:33.678] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_200077_9462 ourBalance=206
+
+[2025-10-13 22:51:33.681] [SIG_OK] Signature created, length=88
+
+[2025-10-13 22:51:33.689] [
+[2025-10-13 22:51:33.694] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_200077_9462, nodeID=A3, format=VALI
+[2025-10-13 22:51:33.700] D
+[2025-10-13 22:51:33.702] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:51:33.710] ]
+[2025-10-13 22:51:33.712]  Node A3 assigned slot 1 at absolute time 123775 (current: 122304, wait: 1471ms)
+[SIG_SCHEDULED] Vote A4_200077_9462 s
+[2025-10-13 22:51:33.716] i
+[2025-10-13 22:51:33.718] gnature scheduled for slot 1 at time 123789 (wait: 1485ms)
+
+#[2025-10-13 22:51:34.406] heartbeat
+[2025-10-13 22:51:35.191] [
+[2025-10-13 22:51:35.194] SIG_TX] Sending scheduled signature for vote A4_200077_9462
+
+[2025-10-13 22:51:35.201] [
+[2025-10-13 22:51:35.203] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_200077_9462, nodeID=A3, format=VALI
+[2025-10-13 22:51:35.212] D
+[2025-10-13 22:51:35.213] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_200077_9462, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:51:35.222] i
+[2025-10-13 22:51:35.224] ng TX: notBefore=123814, current=123818, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:51:35.235] [
+[2025-10-13 22:51:35.237] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x70 nodeID[22]=0xc7
+
+[2025-10-13 22:51:35.241] [
+[2025-10-13 22:51:35.244] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:51:36.104] [
+[2025-10-13 22:51:36.108] LORA_QUEUE] TX done at 124706 -> RX
+
+#[2025-10-13 22:51:36.424] heartbeat
+[2025-10-13 22:51:36.550] [
+[2025-10-13 22:51:36.551] CONSENSUS_STATE] Vote A4_200077_9462 signature count: 0 -> 2
+
+[2025-10-13 22:51:37.441] [
+[2025-10-13 22:51:37.444] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=
+42
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:51:37.447] EW(78B)
+[PKT_RX] Signature matched to vote: A4_200077_9462, from node: A5
+
+[2025-10-13 22:51:37.563] [
+[2025-10-13 22:51:37.568] CONSENSUS] BFT threshold reached (3/4) for  at 4009ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:51:37.573] t
+[2025-10-13 22:51:37.577] ure processed successfully: vote=A4_200077_9462, from=A5, total_voters=3
+[TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:51:37.580] [CONSENSUS_STATE] Vote A4_200077_9462 signature count: 2 -> 3
+
+[2025-10-13 22:51:37.587] [
+[2025-10-13 22:51:37.589] CONSENSUS_DEATH_FIX] Consensus stuck for 15s - forcing cleanup to prevent system death
+
+[2025-10-13 22:51:37.593] [
+[2025-10-13 22:51:37.595] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+#[2025-10-13 22:51:38.464] heartbeat
+[2025-10-13 22:51:38.559] [
+[2025-10-13 22:51:38.561] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_200077_9462
+
+[2025-10-13 22:51:38.630] [
+[2025-10-13 22:51:38.631] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=æ61
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:51:38.636] E
+[2025-10-13 22:51:38.639] W(78B)
+[PKT_RX] Signature matched to vote: A4_200077_9462, from node: A6
+
+[2025-10-13 22:51:38.753] [
+[2025-10-13 22:51:38.755] PERFECT_4_4]  finalized in 5197ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:51:38.760] 0
+[2025-10-13 22:51:38.762] xf1
+[PKT_RX] Signature processed successfully: vote=A4_200077_9462, from=A6, total_voters=4
+
+[2025-10-13 22:51:38.766] [
+[2025-10-13 22:51:38.767] CONSENSUS_STATE] Vote A4_200077_9462 signature count: 3 -> 4
+
+#[2025-10-13 22:51:40.501] heartbeat
+[2025-10-13 22:51:42.186] [
+[2025-10-13 22:51:42.190] CONSENSUS_TIMEOUT] Vote A4_200077_9462 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_200077_
+[2025-10-13 22:51:42.196] 9
+[2025-10-13 22:51:42.198] 462,timestamp_ms=130783,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8643
+[DEADLINE_CLEANUP] Vote A4_200077_946
+#[2025-10-13 22:51:42.200] COM24 CLEANUP_COUNT=3
+[2025-10-13 22:51:42.205] 2
+[2025-10-13 22:51:42.208]  removed
+[CLEANUP] Cleared vote state: A4_200077_9462
+[CLEANUP] Reset vote indices: A4_200077_9462
+
+#[2025-10-13 22:51:42.512] heartbeat
+[2025-10-13 22:51:42.579] [
+[2025-10-13 22:51:42.581] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:51:44.564] heartbeat
+[2025-10-13 22:51:46.534] [
+[2025-10-13 22:51:46.537] FORCE_CLEANUP] Vote A4_200077_9462 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_200077_9462
+
+[2025-10-13 22:51:46.546] [
+[2025-10-13 22:51:46.549] POOL_CLEANUP] Vote removed from pool: A4_200077_9462
+[SESSION_CLEANUP] Session removed: A4_200077_9462
+[CLEANUP_SKIP]
+[2025-10-13 22:51:46.557]  
+[2025-10-13 22:51:46.558] Already cleaned: A4_200077_9462
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:51:46.561]  
+#[2025-10-13 22:51:46.564] heartbeat
+[2025-10-13 22:51:46.567] ended at 135149 - UDP bypass continues if manually activated
+
+[2025-10-13 22:51:47.586] [
+[2025-10-13 22:51:47.588] TX_DIAG] votePool.size=0 scheduled=0
+
+[2025-10-13 22:51:48.559] [
+[2025-10-13 22:51:48.562] LORA_RX_RAW] 120B opcode=0x2 RSSI=-31 from=A4
+
+#[2025-10-13 22:51:48.565] heartbeat
+[2025-10-13 22:51:48.570] [
+[2025-10-13 22:51:48.575] Binary] Processed vote from A4: A4_215116_1782
+[METRIC] event=vote_received,from=A4,vote_id=A4_215116_1782,timestamp_m
+[2025-10-13 22:51:48.578] s=137152,toa_actual_ms=9922036
+[TIMING] VOTE_RECEIVE_A4: 197 us
+
+[2025-10-13 22:51:48.584] [
+[2025-10-13 22:51:48.588] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='3' balance=90 RETURNING FALSE
+
+[2025-10-13 22:51:48.750] [
+[2025-10-13 22:51:48.752] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:51:48.760] d
+[2025-10-13 22:51:48.763] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_215116_1782 ourBalance=206
+
+[2025-10-13 22:51:48.766] [SIG_OK] Signature created, length=88
+
+[2025-10-13 22:51:48.776] [
+[2025-10-13 22:51:48.778] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_215116_1782, nodeID=A3, format=VALI
+[2025-10-13 22:51:48.786] D
+[2025-10-13 22:51:48.788] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:51:48.797] ]
+[2025-10-13 22:51:48.799]  Node A3 assigned slot 1 at absolute time 138795 (current: 137374, wait: 1421ms)
+[SIG_SCHEDULED] Vote A4_215116_1782 s
+[2025-10-13 22:51:48.802] i
+[2025-10-13 22:51:48.803] gnature scheduled for slot 1 at time 138795 (wait: 1421ms)
+
+[2025-10-13 22:51:50.214] [
+[2025-10-13 22:51:50.215] SIG_TX] Sending scheduled signature for vote A4_215116_1782
+
+[2025-10-13 22:51:50.224] [
+[2025-10-13 22:51:50.224] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_215116_1782, nodeID=A3, format=VALI
+[2025-10-13 22:51:50.234] D
+[2025-10-13 22:51:50.235] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_215116_1782, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:51:50.245] i
+[2025-10-13 22:51:50.246] ng TX: notBefore=138820, current=138824, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signat
+[2025-10-13 22:51:50.247] ure transmitted via LoRa
+
+[2025-10-13 22:51:50.258] [
+[2025-10-13 22:51:50.260] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x51 nodeID[22]=0xf3
+
+[2025-10-13 22:51:50.264] [
+[2025-10-13 22:51:50.266] LORA_QUEUE] TX started (non-blocking)
+
+#[2025-10-13 22:51:50.574] heartbeat
+[2025-10-13 22:51:51.127] [
+[2025-10-13 22:51:51.129] LORA_QUEUE] TX done at 139711 -> RX
+
+[2025-10-13 22:51:51.591] [
+[2025-10-13 22:51:51.593] CONSENSUS_STATE] Vote A4_215116_1782 signature count: 0 -> 2
+
+[2025-10-13 22:51:52.465] [
+[2025-10-13 22:51:52.469] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=730
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:51:52.473] EW(78B)
+[PKT_RX] Signature matched to vote: A4_215116_1782, from node: A5
+
+#[2025-10-13 22:51:52.595] heartbeat
+[2025-10-13 22:51:52.638] [
+[2025-10-13 22:51:52.641] CONSENSUS] BFT threshold reached (3/4) for  at 4046ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:51:52.647] t
+[2025-10-13 22:51:52.649] ure processed successfully: vote=A4_215116_1782, from=A5, total_voters=3
+[TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:51:52.653] [
+[2025-10-13 22:51:52.655] CONSENSUS_STATE] Vote A4_215116_1782 signature count: 2 -> 3
+
+[2025-10-13 22:51:52.661] [
+[2025-10-13 22:51:52.663] CONSENSUS_DEATH_FIX] Consensus stuck for 15s - forcing cleanup to prevent system death
+
+[2025-10-13 22:51:52.668] [
+[2025-10-13 22:51:52.670] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-13 22:51:53.635] [
+[2025-10-13 22:51:53.637] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_215116_1782
+
+[2025-10-13 22:51:53.665] [
+[2025-10-13 22:51:53.669] LORA_RX_RAW] 78B opcode=0x7 RSSI=-5 from=Ù9
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=NE
+[2025-10-13 22:51:53.671] W(78B)
+[PKT_RX] Signature matched to vote: A4_215116_1782, from node: A6
+
+[2025-10-13 22:51:53.838] [
+[2025-10-13 22:51:53.841] PERFECT_4_4]  finalized in 5245ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:51:53.846] 0
+[2025-10-13 22:51:53.849] xf1
+[PKT_RX] Signature processed successfully: vote=A4_215116_1782, from=A6, total_voters=4
+
+[2025-10-13 22:51:53.851] [
+[2025-10-13 22:51:53.853] CONSENSUS_STATE] Vote A4_215116_1782 signature count: 3 -> 4
+
+#[2025-10-13 22:51:54.655] heartbeat
+#[2025-10-13 22:51:56.715] heartbeat
+[2025-10-13 22:51:57.211] [
+[2025-10-13 22:51:57.215] CONSENSUS_TIMEOUT] Vote A4_215116_1782 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_215116_
+[2025-10-13 22:51:57.221] 1
+[2025-10-13 22:51:57.224] 782,timestamp_ms=145791,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8631
+[DEADLINE_CLEANUP] Vote A4_215116_178
+#[2025-10-13 22:51:57.226] COM24 CLEANUP_COUNT=4
+[2025-10-13 22:51:57.230] 2
+[2025-10-13 22:51:57.233]  removed
+[CLEANUP] Cleared vote state: A4_215116_1782
+[CLEANUP] Reset vote indices: A4_215116_1782
+
+[2025-10-13 22:51:57.654] [
+[2025-10-13 22:51:57.655] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:51:58.769] heartbeat
+#[2025-10-13 22:52:00.819] heartbeat
+[2025-10-13 22:52:01.443] L
+[2025-10-13 22:52:01.444] ORA_ACTIVITY: 6 packets/30s
+
+[2025-10-13 22:52:01.572] [
+[2025-10-13 22:52:01.574] FORCE_CLEANUP] Vote A4_215116_1782 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_215116_1782
+
+[2025-10-13 22:52:01.584] [
+[2025-10-13 22:52:01.585] POOL_CLEANUP] Vote removed from pool: A4_215116_1782
+[SESSION_CLEANUP] Session removed: A4_215116_1782
+[CLEANUP_SKIP]
+[2025-10-13 22:52:01.594]  
+[2025-10-13 22:52:01.596] Already cleaned: A4_215116_1782
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:52:01.600]  
+[2025-10-13 22:52:01.601] ended at 150169 - UDP bypass continues if manually activated
+
+[2025-10-13 22:52:02.661] [
+[2025-10-13 22:52:02.664] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:52:02.844] heartbeat
+[2025-10-13 22:52:03.607] [
+[2025-10-13 22:52:03.609] LORA_RX_RAW] 120B opcode=0x2 RSSI=-31 from=A4
+
+[2025-10-13 22:52:03.618] [
+[2025-10-13 22:52:03.622] Binary] Processed vote from A4: A4_230166_8262
+[METRIC] event=vote_received,from=A4,vote_id=A4_230166_8262,timestamp_m
+[2025-10-13 22:52:03.625] s=152183,toa_actual_ms=9922017
+[TIMING] VOTE_RECEIVE_A4: 207 us
+
+[2025-10-13 22:52:03.633] [
+[2025-10-13 22:52:03.636] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='4Ì'¾' balance=90 RETURNING FALSE
+
+[2025-10-13 22:52:03.749] [
+[2025-10-13 22:52:03.753] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:52:03.759] d
+[2025-10-13 22:52:03.763] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_230166_8262 ourBalance=206
+
+[2025-10-13 22:52:03.766] [SIG_OK] Signature created, length=88
+
+[2025-10-13 22:52:03.774] [
+[2025-10-13 22:52:03.776] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_230166_8262, nodeID=A3, format=VALI
+[2025-10-13 22:52:03.785] D
+[2025-10-13 22:52:03.786] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:52:03.796] ]
+[2025-10-13 22:52:03.798]  Node A3 assigned slot 1 at absolute time 153826 (current: 152355, wait: 1471ms)
+[SIG_SCHEDULED] Vote A4_230166_8262 s
+[2025-10-13 22:52:03.801] i
+[2025-10-13 22:52:03.803] gnature scheduled for slot 1 at time 153833 (wait: 1478ms)
+
+#[2025-10-13 22:52:04.855] heartbeat
+[2025-10-13 22:52:05.269] [
+[2025-10-13 22:52:05.272] SIG_TX] Sending scheduled signature for vote A4_230166_8262
+
+[2025-10-13 22:52:05.279] [
+[2025-10-13 22:52:05.282] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_230166_8262, nodeID=A3, format=VALI
+[2025-10-13 22:52:05.289] D
+[2025-10-13 22:52:05.291] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_230166_8262, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:52:05.300] i
+[2025-10-13 22:52:05.302] ng TX: notBefore=153857, current=153862, delay=-6ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signat
+[2025-10-13 22:52:05.303] ure transmitted via LoRa
+
+[2025-10-13 22:52:05.313] [
+[2025-10-13 22:52:05.315] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -15ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0xc9 nodeID[22]=0xf8
+
+[2025-10-13 22:52:05.320] [
+[2025-10-13 22:52:05.321] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:52:06.182] [
+[2025-10-13 22:52:06.185] LORA_QUEUE] TX done at 154749 -> RX
+
+[2025-10-13 22:52:06.638] [
+[2025-10-13 22:52:06.640] CONSENSUS_STATE] Vote A4_230166_8262 signature count: 0 -> 2
+
+#[2025-10-13 22:52:06.894] heartbeat
+[2025-10-13 22:52:07.533] [
+[2025-10-13 22:52:07.535] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=¯21
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:52:07.540] E
+[2025-10-13 22:52:07.542] W(78B)
+[PKT_RX] Signature matched to vote: A4_230166_8262, from node: A5
+
+[2025-10-13 22:52:07.656] [
+[2025-10-13 22:52:07.662] CONSENSUS] BFT threshold reached (3/4) for  at 4016ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:52:07.666] ture processed successfully: vote=A4_230166_8262, from=A5, total_voters=3
+
+[2025-10-13 22:52:07.670] [CONSENSUS_STATE] Vote A4_230166_8262 signature count: 2 -> 3
+
+[2025-10-13 22:52:07.679] [
+[2025-10-13 22:52:07.681] CONSENSUS_DEATH_FIX] Consensus stuck for 14s - forcing cleanup to prevent system death
+[TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:52:07.686] [
+[2025-10-13 22:52:07.688] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-13 22:52:08.653] [
+[2025-10-13 22:52:08.657] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_230166_8262
+
+[2025-10-13 22:52:08.765] [
+[2025-10-13 22:52:08.767] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=A2
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=NE
+[2025-10-13 22:52:08.771] W
+[2025-10-13 22:52:08.775] (78B)
+[PKT_RX] Signature matched to vote: A4_230166_8262, from node: A6
+
+[2025-10-13 22:52:08.888] [
+[2025-10-13 22:52:08.891] PERFECT_4_4]  finalized in 5247ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:52:08.896] 0
+#[2025-10-13 22:52:08.897] heartbeat
+[2025-10-13 22:52:08.899] xf1
+[PKT_RX] Signature processed successfully: vote=A4_230166_8262, from=A6, total_voters=4
+
+[2025-10-13 22:52:08.902] [
+[2025-10-13 22:52:08.903] CONSENSUS_STATE] Vote A4_230166_8262 signature count: 3 -> 4
+
+#[2025-10-13 22:52:10.948] heartbeat
+[2025-10-13 22:52:12.231] [
+[2025-10-13 22:52:12.232] CONSENSUS_TIMEOUT] Vote A4_230166_8262 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_230166_
+[2025-10-13 22:52:12.240] 8
+[2025-10-13 22:52:12.242] 262,timestamp_ms=160793,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8602
+[DEADLINE_CLEANUP] Vote A4_230166_826
+#[2025-10-13 22:52:12.244] COM24 CLEANUP_COUNT=5
+[2025-10-13 22:52:12.250] 2
+[2025-10-13 22:52:12.251]  removed
+[CLEANUP] Cleared vote state: A4_230166_8262
+[CLEANUP] Reset vote indices: A4_230166_8262
+
+[2025-10-13 22:52:12.686] [
+[2025-10-13 22:52:12.688] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:52:13.001] heartbeat
+#[2025-10-13 22:52:15.053] heartbeat
+[2025-10-13 22:52:16.620] [
+[2025-10-13 22:52:16.622] FORCE_CLEANUP] Vote A4_230166_8262 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_230166_8262
+
+[2025-10-13 22:52:16.632] [
+[2025-10-13 22:52:16.634] POOL_CLEANUP] Vote removed from pool: A4_230166_8262
+[SESSION_CLEANUP] Session removed: A4_230166_8262
+[CLEANUP_SKIP]
+[2025-10-13 22:52:16.642]  
+[2025-10-13 22:52:16.645] Already cleaned: A4_230166_8262
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:52:16.648]  
+[2025-10-13 22:52:16.651] ended at 165200 - UDP bypass continues if manually activated
+
+#[2025-10-13 22:52:17.087] heartbeat
+[2025-10-13 22:52:17.693] [
+[2025-10-13 22:52:17.695] TX_DIAG] votePool.size=0 scheduled=0
+
+[2025-10-13 22:52:18.644] [
+[2025-10-13 22:52:18.647] LORA_RX_RAW] 120B opcode=0x2 RSSI=-32 from=A4
+
+[2025-10-13 22:52:18.654] [
+[2025-10-13 22:52:18.656] Binary] Processed vote from A4: A4_245204_8273
+[METRIC] event=vote_received,from=A4,vote_id=A4_245204_8273,timestamp_m
+[2025-10-13 22:52:18.660] s
+[2025-10-13 22:52:18.663] =167203,toa_actual_ms=9921999
+[TIMING] VOTE_RECEIVE_A4: 198 us
+
+[2025-10-13 22:52:18.668] [
+[2025-10-13 22:52:18.671] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='5' balance=90 RETURNING FALSE
+
+[2025-10-13 22:52:18.785] [
+[2025-10-13 22:52:18.787] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:52:18.795] d
+[2025-10-13 22:52:18.796] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_245204_8273 ourBalance=206
+
+[2025-10-13 22:52:18.800] [
+[2025-10-13 22:52:18.801] SIG_OK] Signature created, length=88
+
+[2025-10-13 22:52:18.811] [
+[2025-10-13 22:52:18.813] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_245204_8273, nodeID=A3, format=VALI
+[2025-10-13 22:52:18.821] D
+[2025-10-13 22:52:18.823] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:52:18.831] ]
+[2025-10-13 22:52:18.833]  Node A3 assigned slot 1 at absolute time 168845 (current: 167374, wait: 1471ms)
+[SIG_SCHEDULED] Vote A4_245204_8273 s
+[2025-10-13 22:52:18.837] i
+[2025-10-13 22:52:18.839] gnature scheduled for slot 1 at time 168829 (wait: 1455ms)
+
+#[2025-10-13 22:52:19.142] heartbeat
+[2025-10-13 22:52:20.282] [
+[2025-10-13 22:52:20.286] SIG_TX] Sending scheduled signature for vote A4_245204_8273
+
+[2025-10-13 22:52:20.293] [
+[2025-10-13 22:52:20.296] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_245204_8273, nodeID=A3, format=VALI
+[2025-10-13 22:52:20.303] D
+[2025-10-13 22:52:20.305] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_245204_8273, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:52:20.314] i
+[2025-10-13 22:52:20.316] ng TX: notBefore=168853, current=168858, delay=-6ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:52:20.327] [
+[2025-10-13 22:52:20.329] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -15ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0xbc nodeID[22]=0x26
+
+[2025-10-13 22:52:20.333] [
+[2025-10-13 22:52:20.335] LORA_QUEUE] TX started (non-blocking)
+
+#[2025-10-13 22:52:21.149] heartbeat
+[2025-10-13 22:52:21.195] [
+[2025-10-13 22:52:21.196] LORA_QUEUE] TX done at 169745 -> RX
+
+[2025-10-13 22:52:21.671] [
+[2025-10-13 22:52:21.672] CONSENSUS_STATE] Vote A4_245204_8273 signature count: 0 -> 2
+
+[2025-10-13 22:52:22.556] [
+[2025-10-13 22:52:22.558] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=Ú203
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=
+[2025-10-13 22:52:22.561] NEW(78B)
+[PKT_RX] Signature matched to vote: A4_245204_8273, from node: A5
+
+[2025-10-13 22:52:22.678] [
+[2025-10-13 22:52:22.683] CONSENSUS] BFT threshold reached (3/4) for  at 4002ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:52:22.686] ture processed successfully: vote=A4_245204_8273, from=A5, total_voters=3
+
+[2025-10-13 22:52:22.690] [
+[2025-10-13 22:52:22.693] CONSENSUS_STATE] Vote A4_245204_8273 signature count: 2 -> 3
+
+[2025-10-13 22:52:22.701] [
+[2025-10-13 22:52:22.703] CONSENSUS_DEATH_FIX] Consensus stuck for 14s - forcing cleanup to prevent system death
+[TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:52:22.707] [
+[2025-10-13 22:52:22.709] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+#[2025-10-13 22:52:23.196] heartbeat
+[2025-10-13 22:52:23.674] [
+[2025-10-13 22:52:23.678] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_245204_8273
+
+[2025-10-13 22:52:23.752] [
+[2025-10-13 22:52:23.755] LORA_RX_RAW] 78B opcode=0x7 RSSI=-5 from=4220
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=
+[2025-10-13 22:52:23.758] N
+[2025-10-13 22:52:23.761] EW(78B)
+[PKT_RX] Signature matched to vote: A4_245204_8273, from node: A6
+
+[2025-10-13 22:52:23.875] [
+[2025-10-13 22:52:23.880] PERFECT_4_4]  finalized in 5197ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:52:23.884] 0xf1
+[PKT_RX] Signature processed successfully: vote=A4_245204_8273, from=A6, total_voters=4
+
+[2025-10-13 22:52:23.889] [
+[2025-10-13 22:52:23.892] CONSENSUS_STATE] Vote A4_245204_8273 signature count: 3 -> 4
+
+#[2025-10-13 22:52:25.200] heartbeat
+[2025-10-13 22:52:27.256] [
+#[2025-10-13 22:52:27.259] heartbeat
+[2025-10-13 22:52:27.261] CONSENSUS_TIMEOUT] Vote A4_245204_8273 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_245204_
+[2025-10-13 22:52:27.266] 8
+[2025-10-13 22:52:27.268] 273,timestamp_ms=175802,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8592
+[DEADLINE_CLEANUP] Vote A4_245204_827
+#[2025-10-13 22:52:27.270] COM24 CLEANUP_COUNT=6
+[2025-10-13 22:52:27.276] 3
+[2025-10-13 22:52:27.278]  removed
+[CLEANUP] Cleared vote state: A4_245204_8273
+[CLEANUP] Reset vote indices: A4_245204_8273
+
+[2025-10-13 22:52:27.708] [
+[2025-10-13 22:52:27.710] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:52:29.268] heartbeat
+#[2025-10-13 22:52:31.322] heartbeat
+[2025-10-13 22:52:31.481] L
+[2025-10-13 22:52:31.482] ORA_ACTIVITY: 6 packets/30s
+
+[2025-10-13 22:52:31.655] [
+[2025-10-13 22:52:31.657] FORCE_CLEANUP] Vote A4_245204_8273 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup atte
+[2025-10-13 22:52:31.658] mpt: A4_245204_8273
+
+[2025-10-13 22:52:31.667] [
+[2025-10-13 22:52:31.669] POOL_CLEANUP] Vote removed from pool: A4_245204_8273
+[SESSION_CLEANUP] Session removed: A4_245204_8273
+[CLEANUP_SKIP]
+[2025-10-13 22:52:31.679]  
+[2025-10-13 22:52:31.679] Already cleaned: A4_245204_8273
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:52:31.683]  
+[2025-10-13 22:52:31.686] ended at 180219 - UDP bypass continues if manually activated
+
+[2025-10-13 22:52:32.714] [
+[2025-10-13 22:52:32.717] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:52:33.332] heartbeat
+[2025-10-13 22:52:33.671] [
+[2025-10-13 22:52:33.672] LORA_RX_RAW] 120B opcode=0x2 RSSI=-31 from=A4
+
+[2025-10-13 22:52:33.682] [
+[2025-10-13 22:52:33.684] Binary] Processed vote from A4: A4_260233_2457
+[METRIC] event=vote_received,from=A4,vote_id=A4_260233_2457,timestamp_m
+[2025-10-13 22:52:33.688] s
+[2025-10-13 22:52:33.689] =182213,toa_actual_ms=9921980
+[TIMING] VOTE_RECEIVE_A4: 198 us
+
+[2025-10-13 22:52:33.696] [
+[2025-10-13 22:52:33.699] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='6' balance=90 RETURNING FALSE
+
+[2025-10-13 22:52:33.813] [
+[2025-10-13 22:52:33.816] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:52:33.823] d
+[2025-10-13 22:52:33.826] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_260233_2457 ourBalance=206
+
+[2025-10-13 22:52:33.829] [SIG_OK] Signature created, length=88
+
+[2025-10-13 22:52:33.838] [
+[2025-10-13 22:52:33.841] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_260233_2457, nodeID=A3, format=VALI
+[2025-10-13 22:52:33.849] D
+[2025-10-13 22:52:33.853] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:52:33.859] ]
+[2025-10-13 22:52:33.862]  Node A3 assigned slot 1 at absolute time 183856 (current: 182385, wait: 1471ms)
+[SIG_SCHEDULED] Vote A4_260233_2457 s
+[2025-10-13 22:52:33.865] i
+[2025-10-13 22:52:33.867] gnature scheduled for slot 1 at time 183870 (wait: 1485ms)
+
+[2025-10-13 22:52:35.340] [
+#[2025-10-13 22:52:35.343] heartbeat
+[2025-10-13 22:52:35.346] SIG_TX] Sending scheduled signature for vote A4_260233_2457
+
+[2025-10-13 22:52:35.350] [
+[2025-10-13 22:52:35.353] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_260233_2457, nodeID=A3, format=VALI
+[2025-10-13 22:52:35.361] D
+[2025-10-13 22:52:35.363] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_260233_2457, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:52:35.371] i
+[2025-10-13 22:52:35.374] ng TX: notBefore=183895, current=183899, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:52:35.385] [
+[2025-10-13 22:52:35.388] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x57 nodeID[22]=0xc3
+
+[2025-10-13 22:52:35.390] [
+[2025-10-13 22:52:35.393] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:52:36.254] [
+[2025-10-13 22:52:36.256] LORA_QUEUE] TX done at 184786 -> RX
+
+[2025-10-13 22:52:36.699] [
+[2025-10-13 22:52:36.701] CONSENSUS_STATE] Vote A4_260233_2457 signature count: 0 -> 2
+
+#[2025-10-13 22:52:37.375] heartbeat
+[2025-10-13 22:52:37.566] [
+[2025-10-13 22:52:37.567] LORA_RX_RAW] 78B opcode=0x7 RSSI=-3 from=146
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:52:37.573] E
+[2025-10-13 22:52:37.576] W(78B)
+[PKT_RX] Signature matched to vote: A4_260233_2457, from node: A5
+
+[2025-10-13 22:52:37.689] [
+[2025-10-13 22:52:37.692] CONSENSUS] BFT threshold reached (3/4) for  at 3985ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:52:37.695] t
+[2025-10-13 22:52:37.698] ure processed successfully: vote=A4_260233_2457, from=A5, total_voters=3
+
+[2025-10-13 22:52:37.702] [CONSENSUS_STATE] Vote A4_260233_2457 signature count: 2 -> 3
+
+[2025-10-13 22:52:37.709] [
+[2025-10-13 22:52:37.713] CONSENSUS_DEATH_FIX] Consensus stuck for 14s - forcing cleanup to prevent system death
+
+[2025-10-13 22:52:37.715] [
+[2025-10-13 22:52:37.718] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-13 22:52:37.721] [TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:52:38.686] [
+[2025-10-13 22:52:38.689] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_260233_2457
+
+[2025-10-13 22:52:38.778] [
+[2025-10-13 22:52:38.781] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=ß57
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:52:38.785] E
+[2025-10-13 22:52:38.788] W(78B)
+[PKT_RX] Signature matched to vote: A4_260233_2457, from node: A6
+
+[2025-10-13 22:52:38.901] [
+[2025-10-13 22:52:38.902] PERFECT_4_4]  finalized in 5196ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:52:38.909] 0
+[2025-10-13 22:52:38.910] xf1
+[PKT_RX] Signature processed successfully: vote=A4_260233_2457, from=A6, total_voters=4
+
+[2025-10-13 22:52:38.916] [
+[2025-10-13 22:52:38.918] CONSENSUS_STATE] Vote A4_260233_2457 signature count: 3 -> 4
+
+#[2025-10-13 22:52:39.413] heartbeat
+#[2025-10-13 22:52:41.469] heartbeat
+[2025-10-13 22:52:42.274] [
+[2025-10-13 22:52:42.276] CONSENSUS_TIMEOUT] Vote A4_260233_2457 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_260233_
+[2025-10-13 22:52:42.285] 2
+[2025-10-13 22:52:42.286] 457,timestamp_ms=190803,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8582
+[DEADLINE_CLEANUP] Vote A4_260233_245
+#[2025-10-13 22:52:42.288] COM24 CLEANUP_COUNT=7
+[2025-10-13 22:52:42.293] 7
+[2025-10-13 22:52:42.295]  removed
+[CLEANUP] Cleared vote state: A4_260233_2457
+[CLEANUP] Reset vote indices: A4_260233_2457
+
+[2025-10-13 22:52:42.727] [
+[2025-10-13 22:52:42.728] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:52:43.480] heartbeat
+#[2025-10-13 22:52:45.537] heartbeat
+[2025-10-13 22:52:46.684] [
+[2025-10-13 22:52:46.687] FORCE_CLEANUP] Vote A4_260233_2457 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_260233_2457
+
+[2025-10-13 22:52:46.697] [
+[2025-10-13 22:52:46.698] POOL_CLEANUP] Vote removed from pool: A4_260233_2457
+[SESSION_CLEANUP] Session removed: A4_260233_2457
+[CLEANUP_SKIP]
+[2025-10-13 22:52:46.707]  
+[2025-10-13 22:52:46.709] Already cleaned: A4_260233_2457
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:52:46.713]  ended at 195230 - UDP bypass continues if manually activated
+
+#[2025-10-13 22:52:47.579] heartbeat
+[2025-10-13 22:52:47.734] [
+[2025-10-13 22:52:47.737] TX_DIAG] votePool.size=0 scheduled=0
+
+[2025-10-13 22:52:48.712] [
+[2025-10-13 22:52:48.716] LORA_RX_RAW] 120B opcode=0x2 RSSI=-32 from=A4
+
+[2025-10-13 22:52:48.722] [
+[2025-10-13 22:52:48.725] Binary] Processed vote from A4: A4_275274_6565
+[METRIC] event=vote_received,from=A4,vote_id=A4_275274_6565,timestamp_m
+[2025-10-13 22:52:48.728] s=197236,toa_actual_ms=9921962
+[TIMING] VOTE_RECEIVE_A4: 198 us
+
+[2025-10-13 22:52:48.736] [
+[2025-10-13 22:52:48.738] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='7' balance=90 RETURNING FALSE
+
+[2025-10-13 22:52:48.902] [
+[2025-10-13 22:52:48.903] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:52:48.912] d
+[2025-10-13 22:52:48.914] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_275274_6565 ourBalance=206
+
+[2025-10-13 22:52:48.918] [
+[2025-10-13 22:52:48.918] SIG_OK] Signature created, length=88
+
+[2025-10-13 22:52:48.929] [
+[2025-10-13 22:52:48.930] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_275274_6565, nodeID=A3, format=VALI
+[2025-10-13 22:52:48.939] D
+[2025-10-13 22:52:48.940] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:52:48.949] ]
+[2025-10-13 22:52:48.950]  Node A3 assigned slot 1 at absolute time 198879 (current: 197457, wait: 1422ms)
+[SIG_SCHEDULED] Vote A4_275274_6565 s
+[2025-10-13 22:52:48.954] i
+[2025-10-13 22:52:48.956] gnature scheduled for slot 1 at time 198896 (wait: 1439ms)
+
+#[2025-10-13 22:52:49.635] heartbeat
+[2025-10-13 22:52:50.384] [
+[2025-10-13 22:52:50.386] SIG_TX] Sending scheduled signature for vote A4_275274_6565
+
+[2025-10-13 22:52:50.394] [
+[2025-10-13 22:52:50.395] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_275274_6565, nodeID=A3, format=VALI
+[2025-10-13 22:52:50.404] D
+[2025-10-13 22:52:50.407] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_275274_6565, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:52:50.415] i
+[2025-10-13 22:52:50.417] ng TX: notBefore=198921, current=198925, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:52:50.428] [
+[2025-10-13 22:52:50.430] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0xa2 nodeID[22]=0xdb
+
+[2025-10-13 22:52:50.434] [
+[2025-10-13 22:52:50.436] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:52:51.297] [
+[2025-10-13 22:52:51.300] LORA_QUEUE] TX done at 199813 -> RX
+
+#[2025-10-13 22:52:51.671] heartbeat
+[2025-10-13 22:52:51.743] [
+[2025-10-13 22:52:51.744] CONSENSUS_STATE] Vote A4_275274_6565 signature count: 0 -> 2
+
+[2025-10-13 22:52:52.636] [
+[2025-10-13 22:52:52.641] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=Ä54
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:52:52.645] EW(78B)
+[PKT_RX] Signature matched to vote: A4_275274_6565, from node: A5
+
+[2025-10-13 22:52:52.808] [
+[2025-10-13 22:52:52.810] CONSENSUS] BFT threshold reached (3/4) for  at 4064ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:52:52.818] t
+[2025-10-13 22:52:52.819] ure processed successfully: vote=A4_275274_6565, from=A5, total_voters=3
+[TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:52:52.823] [
+[2025-10-13 22:52:52.825] CONSENSUS_STATE] Vote A4_275274_6565 signature count: 2 -> 3
+
+[2025-10-13 22:52:52.832] [
+[2025-10-13 22:52:52.833] CONSENSUS_DEATH_FIX] Consensus stuck for 15s - forcing cleanup to prevent system death
+
+[2025-10-13 22:52:52.838] [
+[2025-10-13 22:52:52.839] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+#[2025-10-13 22:52:53.701] heartbeat
+[2025-10-13 22:52:53.805] [
+[2025-10-13 22:52:53.807] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_275274_6565
+
+[2025-10-13 22:52:53.819] [
+[2025-10-13 22:52:53.824] LORA_RX_RAW] 78B opcode=0x7 RSSI=-5 from=*33
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:52:53.827] EW(78B)
+[PKT_RX] Signature matched to vote: A4_275274_6565, from node: A6
+
+[2025-10-13 22:52:53.992] [
+[2025-10-13 22:52:53.993] PERFECT_4_4]  finalized in 5246ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-13 22:52:54.000] 0
+[2025-10-13 22:52:54.001] xf1
+[PKT_RX] Signature processed successfully: vote=A4_275274_6565, from=A6, total_voters=4
+
+[2025-10-13 22:52:54.006] [
+[2025-10-13 22:52:54.008] CONSENSUS_STATE] Vote A4_275274_6565 signature count: 3 -> 4
+
+#[2025-10-13 22:52:55.759] heartbeat
+[2025-10-13 22:52:57.295] [
+[2025-10-13 22:52:57.305] CONSENSUS_TIMEOUT] Vote A4_275274_6565 timed out with 4 signatures
+[METRIC] event=consensus_timeout,vote_id=A4_275274_6565,timestamp_ms=205806,outcome=TIMEOUT,participants=A3,A4,A5,A6,latency_ms=8562
+[DEADLINE_CLEANUP] Vote A4_275274_656
+#[2025-10-13 22:52:57.307] COM24 CLEANUP_COUNT=8
+[2025-10-13 22:52:57.313] 5
+[2025-10-13 22:52:57.316]  removed
+[CLEANUP] Cleared vote state: A4_275274_6565
+[CLEANUP] Reset vote indices: A4_275274_6565
+
+#[2025-10-13 22:52:57.810] heartbeat
+[2025-10-13 22:52:57.825] [
+[2025-10-13 22:52:57.827] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:52:59.826] heartbeat
+[2025-10-13 22:53:01.518] L
+[2025-10-13 22:53:01.522] ORA_ACTIVITY: 6 packets/30s
+
+[2025-10-13 22:53:01.724] [
+[2025-10-13 22:53:01.726] FORCE_CLEANUP] Vote A4_275274_6565 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup attempt: A4_275274_6565
+
+[2025-10-13 22:53:01.736] [
+[2025-10-13 22:53:01.737] POOL_CLEANUP] Vote removed from pool: A4_275274_6565
+[SESSION_CLEANUP] Session removed: A4_275274_6565
+[CLEANUP_SKIP]
+[2025-10-13 22:53:01.746]  
+[2025-10-13 22:53:01.748] Already cleaned: A4_275274_6565
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_MODE] Active consensus
+[2025-10-13 22:53:01.752]  
+[2025-10-13 22:53:01.753] ended at 210253 - UDP bypass continues if manually activated
+
+#[2025-10-13 22:53:01.868] heartbeat
+[2025-10-13 22:53:02.832] [
+[2025-10-13 22:53:02.833] TX_DIAG] votePool.size=0 scheduled=0
+
+[2025-10-13 22:53:03.742] [
+[2025-10-13 22:53:03.744] LORA_RX_RAW] 120B opcode=0x2 RSSI=-31 from=A4
+
+[2025-10-13 22:53:03.752] [
+[2025-10-13 22:53:03.754] Binary] Processed vote from A4: A4_290306_8675
+[METRIC] event=vote_received,from=A4,vote_id=A4_290306_8675,timestamp_m
+[2025-10-13 22:53:03.759] s
+[2025-10-13 22:53:03.762] =212249,toa_actual_ms=9921943
+[TIMING] VOTE_RECEIVE_A4: 199 us
+
+[2025-10-13 22:53:03.767] [
+[2025-10-13 22:53:03.770] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='8' balance=90 RETURNING FALSE
+
+[2025-10-13 22:53:03.883] [
+#[2025-10-13 22:53:03.889] heartbeat
+[2025-10-13 22:53:03.892] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:53:03.895] d=TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_290306_8675 ourBalance=206
+
+[2025-10-13 22:53:03.898] [
+[2025-10-13 22:53:03.901] SIG_OK] Signature created, length=88
+
+[2025-10-13 22:53:03.908] [
+[2025-10-13 22:53:03.912] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_290306_8675, nodeID=A3, format=VALI
+[2025-10-13 22:53:03.919] D
+[2025-10-13 22:53:03.923] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:53:03.930] ]
+[2025-10-13 22:53:03.932]  Node A3 assigned slot 1 at absolute time 213892 (current: 212420, wait: 1472ms)
+[SIG_SCHEDULED] Vote A4_290306_8675 s
+[2025-10-13 22:53:03.935] i
+[2025-10-13 22:53:03.938] gnature scheduled for slot 1 at time 213878 (wait: 1458ms)
+
+[2025-10-13 22:53:05.383] [
+[2025-10-13 22:53:05.387] SIG_TX] Sending scheduled signature for vote A4_290306_8675
+
+[2025-10-13 22:53:05.393] [
+[2025-10-13 22:53:05.396] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_290306_8675, nodeID=A3, format=VALI
+[2025-10-13 22:53:05.404] D
+[2025-10-13 22:53:05.406] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_290306_8675, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:53:05.414] i
+[2025-10-13 22:53:05.416] ng TX: notBefore=213903, current=213907, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signat
+[2025-10-13 22:53:05.418] ure transmitted via LoRa
+
+[2025-10-13 22:53:05.427] [
+[2025-10-13 22:53:05.430] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x92 nodeID[22]=0xcf
+
+[2025-10-13 22:53:05.433] [
+[2025-10-13 22:53:05.435] LORA_QUEUE] TX started (non-blocking)
+
+#[2025-10-13 22:53:05.925] heartbeat
+[2025-10-13 22:53:06.295] [
+[2025-10-13 22:53:06.307] LORA_QUEUE] TX done at 214794 -> RX
+
+[2025-10-13 22:53:06.771] [
+[2025-10-13 22:53:06.773] CONSENSUS_STATE] Vote A4_290306_8675 signature count: 0 -> 2
+
+[2025-10-13 22:53:07.839] [
+[2025-10-13 22:53:07.871] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:53:07.956] heartbeat
+[2025-10-13 22:53:08.899] [
+[2025-10-13 22:53:08.973] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=53
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=NEW(78B)
+[PKT_RX] Signature matched to vote: A4_290306_8675, from node: A6
+
+[2025-10-13 22:53:09.021] [
+[2025-10-13 22:53:09.055] CONSENSUS] BFT threshold reached (3/4) for  at 5246ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signature processed successfully: vote=A4_290306_8675, from=A6, total_voters=3
+[CONSENSUS_STATE] Vote A4_290306_8675 signature count: 2 -> 3
+[CONSENSUS_DEATH_FIX] Consensus stuck for 16s - forcing cleanup to prevent system death
+[CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+#[2025-10-13 22:53:09.960] heartbeat
+[2025-10-13 22:53:10.019] [
+[2025-10-13 22:53:10.023] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_290306_8675
+
+#[2025-10-13 22:53:12.013] heartbeat
+[2025-10-13 22:53:12.311] [
+[2025-10-13 22:53:12.314] DEADLINE_CLEANUP] Vote A4_290306_8675 removed
+[CLEANUP] Cleared vote state: A4_290306_8675
+[CLEANUP] Reset vote indices: A4_290306_8675
+
+#[2025-10-13 22:53:12.316] COM24 CLEANUP_COUNT=9
+[2025-10-13 22:53:12.845] [
+[2025-10-13 22:53:12.846] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:53:14.018] heartbeat
+#[2025-10-13 22:53:16.076] heartbeat
+[2025-10-13 22:53:16.754] [
+[2025-10-13 22:53:16.758] FORCE_CLEANUP] Vote A4_290306_8675 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup atte
+[2025-10-13 22:53:16.765] m
+[2025-10-13 22:53:16.767] pt: A4_290306_8675
+[POOL_CLEANUP] Vote removed from pool: A4_290306_8675
+[SESSION_CLEANUP] Session removed: A4_290306
+[2025-10-13 22:53:16.775] _
+[2025-10-13 22:53:16.777] 8675
+[CLEANUP_SKIP] Already cleaned: A4_290306_8675
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_M
+[2025-10-13 22:53:16.783] O
+[2025-10-13 22:53:16.785] DE] Active consensus ended at 225266 - UDP bypass continues if manually activated
+
+[2025-10-13 22:53:17.852] [
+[2025-10-13 22:53:17.855] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:53:18.102] heartbeat
+#[2025-10-13 22:53:20.165] heartbeat
+#[2025-10-13 22:53:22.221] heartbeat
+[2025-10-13 22:53:22.858] [
+[2025-10-13 22:53:22.861] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:53:24.228] heartbeat
+#[2025-10-13 22:53:26.280] heartbeat
+[2025-10-13 22:53:27.864] [
+[2025-10-13 22:53:27.866] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:53:28.306] heartbeat
+#[2025-10-13 22:53:30.357] heartbeat
+[2025-10-13 22:53:31.556] L
+[2025-10-13 22:53:31.567] ORA_ACTIVITY: 2 packets/30s
+
+#[2025-10-13 22:53:32.380] heartbeat
+[2025-10-13 22:53:32.872] [
+[2025-10-13 22:53:32.875] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:53:34.430] heartbeat
+[2025-10-13 22:53:35.761] [
+[2025-10-13 22:53:35.765] LORA_RX_RAW] 120B opcode=0x2 RSSI=-32 from=A4
+
+[2025-10-13 22:53:35.773] [
+[2025-10-13 22:53:35.776] Binary] Processed vote from A4: A4_322330_7594
+[METRIC] event=vote_received,from=A4,vote_id=A4_322330_7594,timestamp_m
+[2025-10-13 22:53:35.779] s=244232,toa_actual_ms=9921902
+[TIMING] VOTE_RECEIVE_A4: 201 us
+
+[2025-10-13 22:53:35.786] [
+[2025-10-13 22:53:35.788] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='9' balance=90 RETURNING FALSE
+
+[2025-10-13 22:53:35.903] [
+[2025-10-13 22:53:35.906] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:53:35.913] d
+[2025-10-13 22:53:35.917] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_322330_7594 ourBalance=206
+
+[2025-10-13 22:53:35.920] [SIG_OK] Signature created, length=88
+
+[2025-10-13 22:53:35.929] [
+[2025-10-13 22:53:35.931] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_322330_7594, nodeID=A3, format=VALI
+[2025-10-13 22:53:35.939] D
+[2025-10-13 22:53:35.942] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:53:35.950] ]
+[2025-10-13 22:53:35.952]  Node A3 assigned slot 1 at absolute time 245874 (current: 244403, wait: 1471ms)
+[SIG_SCHEDULED] Vote A4_322330_7594 s
+[2025-10-13 22:53:35.955] ignature scheduled for slot 1 at time 245874 (wait: 1471ms)
+
+#[2025-10-13 22:53:36.454] heartbeat
+[2025-10-13 22:53:37.415] [
+[2025-10-13 22:53:37.419] SIG_TX] Sending scheduled signature for vote A4_322330_7594
+
+[2025-10-13 22:53:37.426] [
+[2025-10-13 22:53:37.429] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_322330_7594, nodeID=A3, format=VALI
+[2025-10-13 22:53:37.436] D
+[2025-10-13 22:53:37.439] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_322330_7594, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:53:37.446] i
+[2025-10-13 22:53:37.449] ng TX: notBefore=245898, current=245903, delay=-6ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:53:37.460] [
+[2025-10-13 22:53:37.462] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -15ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x4a nodeID[22]=0xd7
+
+[2025-10-13 22:53:37.465] [
+[2025-10-13 22:53:37.468] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:53:37.878] [
+[2025-10-13 22:53:37.882] TX_DIAG] votePool.size=1 scheduled=0
+
+[2025-10-13 22:53:38.328] [
+[2025-10-13 22:53:38.331] LORA_QUEUE] TX done at 246790 -> RX
+
+#[2025-10-13 22:53:38.456] heartbeat
+[2025-10-13 22:53:38.796] [
+[2025-10-13 22:53:38.797] CONSENSUS_STATE] Vote A4_322330_7594 signature count: 0 -> 2
+
+#[2025-10-13 22:53:40.474] heartbeat
+[2025-10-13 22:53:40.868] [
+[2025-10-13 22:53:40.873] LORA_RX_RAW] 78B opcode=0x7 RSSI=-4 from=Ü45
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=N
+[2025-10-13 22:53:40.876] EW(78B)
+[PKT_RX] Signature matched to vote: A4_322330_7594, from node: A6
+
+[2025-10-13 22:53:40.991] [
+[2025-10-13 22:53:40.994] CONSENSUS] BFT threshold reached (3/4) for  at 5197ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-13 22:53:40.998] t
+[2025-10-13 22:53:41.001] ure processed successfully: vote=A4_322330_7594, from=A6, total_voters=3
+
+[2025-10-13 22:53:41.004] [
+[2025-10-13 22:53:41.007] CONSENSUS_STATE] Vote A4_322330_7594 signature count: 2 -> 3
+
+[2025-10-13 22:53:41.012] [
+[2025-10-13 22:53:41.014] CONSENSUS_DEATH_FIX] Consensus stuck for 31s - forcing cleanup to prevent system death
+
+[2025-10-13 22:53:41.018] [
+[2025-10-13 22:53:41.021] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-13 22:53:41.988] [
+[2025-10-13 22:53:41.990] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_322330_7594
+
+[2025-10-13 22:53:42.349] [
+[2025-10-13 22:53:42.351] DEADLINE_CLEANUP] Vote A4_322330_7594 removed
+[CLEANUP] Cleared vote state: A4_322330_7594
+[CLEANUP] Reset vote indices: A4_322330_7594
+
+#[2025-10-13 22:53:42.353] COM24 CLEANUP_COUNT=10
+#[2025-10-13 22:53:42.482] heartbeat
+[2025-10-13 22:53:42.885] [
+[2025-10-13 22:53:42.888] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:53:44.507] heartbeat
+#[2025-10-13 22:53:46.559] heartbeat
+[2025-10-13 22:53:47.351] [
+[2025-10-13 22:53:47.355] CLEANUP_SKIP] Already cleaned: A4_322330_7594
+
+[2025-10-13 22:53:47.892] [
+[2025-10-13 22:53:47.896] TX_DIAG] votePool.size=1 scheduled=0
+
+#[2025-10-13 22:53:48.578] heartbeat
+[2025-10-13 22:53:48.772] [
+[2025-10-13 22:53:48.774] FORCE_CLEANUP] Vote A4_322330_7594 WILL be cleaned (age: 12970ms)
+[FORCE_REMOVE] Vote still in pool after cleanup atte
+[2025-10-13 22:53:48.783] m
+[2025-10-13 22:53:48.785] pt: A4_322330_7594
+[POOL_CLEANUP] Vote removed from pool: A4_322330_7594
+[SESSION_CLEANUP] Session removed: A4_322330
+[2025-10-13 22:53:48.794] _
+[2025-10-13 22:53:48.795] 7594
+[CLEANUP_SKIP] Already cleaned: A4_322330_7594
+[CLEANUP_STATUS] Cleaned 1 votes | Pool size now: 0
+[CONSENSUS_M
+[2025-10-13 22:53:48.800] O
+[2025-10-13 22:53:48.803] DE] Active consensus ended at 257248 - UDP bypass continues if manually activated
+
+#[2025-10-13 22:53:50.605] heartbeat
+#[2025-10-13 22:53:52.655] heartbeat
+[2025-10-13 22:53:52.898] [
+[2025-10-13 22:53:52.900] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:53:54.711] heartbeat
+#[2025-10-13 22:53:56.762] heartbeat
+[2025-10-13 22:53:57.905] [
+[2025-10-13 22:53:57.907] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:53:58.771] heartbeat
+#[2025-10-13 22:54:00.822] heartbeat
+[2025-10-13 22:54:01.593] L
+[2025-10-13 22:54:01.595] ORA_ACTIVITY: 2 packets/30s
+
+#[2025-10-13 22:54:02.824] heartbeat
+[2025-10-13 22:54:02.911] [
+[2025-10-13 22:54:02.915] TX_DIAG] votePool.size=0 scheduled=0
+
+#[2025-10-13 22:54:04.850] heartbeat
+#[2025-10-13 22:54:06.901] heartbeat
+[2025-10-13 22:54:07.769] [
+[2025-10-13 22:54:07.771] LORA_RX_RAW] 120B opcode=0x2 RSSI=-27 from=A4
+
+[2025-10-13 22:54:07.780] [
+[2025-10-13 22:54:07.782] Binary] Processed vote from A4: A4_354345_3095
+[METRIC] event=vote_received,from=A4,vote_id=A4_354345_3095,timestamp_m
+[2025-10-13 22:54:07.786] s
+[2025-10-13 22:54:07.787] =276204,toa_actual_ms=9921859
+[TIMING] VOTE_RECEIVE_A4: 198 us
+
+[2025-10-13 22:54:07.794] [
+[2025-10-13 22:54:07.796] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='0' balance=90 RETURNING FALSE
+
+[2025-10-13 22:54:07.961] [
+[2025-10-13 22:54:07.962] SIG_CHECK] vote.voters.count(A3)=0, senderNodeID=A4, NODE_ID=A3
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-13 22:54:07.971] d
+[2025-10-13 22:54:07.972] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_354345_3095 ourBalance=206
+
+[2025-10-13 22:54:07.976] [
+[2025-10-13 22:54:07.978] SIG_OK] Signature created, length=88
+
+[2025-10-13 22:54:07.986] [
+[2025-10-13 22:54:07.987] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_354345_3095, nodeID=A3, format=VALI
+[2025-10-13 22:54:07.996] D
+[2025-10-13 22:54:07.998] (78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A3)
+[CONSENSUS_SLOT
+[2025-10-13 22:54:08.007] ]
+[2025-10-13 22:54:08.008]  Node A3 assigned slot 1 at absolute time 277847 (current: 276425, wait: 1422ms)
+[SIG_SCHEDULED] Vote A4_354345_3095 s
+[2025-10-13 22:54:08.016] i
+[2025-10-13 22:54:08.017] gnature scheduled for slot 1 at time 277857 (wait: 1432ms)
+[TX_DIAG] votePool.size=1 scheduled=1
+
+#[2025-10-13 22:54:08.949] heartbeat
+[2025-10-13 22:54:09.434] [
+[2025-10-13 22:54:09.436] SIG_TX] Sending scheduled signature for vote A4_354345_3095
+
+[2025-10-13 22:54:09.445] [
+[2025-10-13 22:54:09.446] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_354345_3095, nodeID=A3, format=VALI
+[2025-10-13 22:54:09.455] D
+[2025-10-13 22:54:09.457] (78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_354345_3095, from=A3
+[QUEUE_DEBUG] Queu
+[2025-10-13 22:54:09.465] i
+[2025-10-13 22:54:09.468] ng TX: notBefore=277882, current=277886, delay=-5ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature transmitted via LoRa
+
+[2025-10-13 22:54:09.479] [
+[2025-10-13 22:54:09.481] LORA_TX_QUEUE] Opcode: 0x7 | Radio mode: RX | Wait: -14ms
+[TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0x47 nodeID[22]=0x12
+
+[2025-10-13 22:54:09.485] [
+[2025-10-13 22:54:09.487] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-13 22:54:10.347] [
+[2025-10-13 22:54:10.350] LORA_QUEUE] TX done at 278773 -> RX
+
+[2025-10-13 22:54:10.804] [
+[2025-10-13 22:54:10.807] CONSENSUS_STATE] Vote A4_354345_3095 signature count: 0 -> 2
+
+#[2025-10-13 22:54:10.998] heartbeat
+#[2025-10-13 22:54:11.172] COM24 session end

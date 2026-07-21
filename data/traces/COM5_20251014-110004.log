@@ -1,0 +1,229 @@
+#[2025-10-14 11:00:04.063] COM5 session start
+[2025-10-14 11:00:04.568] E
+[2025-10-14 11:00:04.575] RROR: Rounds 1-100 only
+
+#[2025-10-14 11:00:06.078] heartbeat
+[2025-10-14 11:00:06.314] [
+[2025-10-14 11:00:06.320] LORA_RX_RAW] 120B opcode=0x2 RSSI=-37 from=A4
+
+[2025-10-14 11:00:06.326] [Binary] Processed vote from A4: A4_14778_5597
+[METRIC] event=vote_received,from=A4,vote_id=A4_14778_5597,timestamp_ms=
+[2025-10-14 11:00:06.336] 2
+[2025-10-14 11:00:06.340] 1569,lora_latency_ms=6791
+[ALG4.1] OnReceiveVoteInit: A4_14778_5597
+[ALG4.1] Starting vote: A4_14778_5597 deadline=31
+[2025-10-14 11:00:06.345] 5
+[2025-10-14 11:00:06.346] 69 (fallback)
+[ALG4.1] No active vote - setting as active
+[TIMING] LOCAL_PROCESSING_A4: 201 us
+[TIMING] LORA_LATENCY
+[2025-10-14 11:00:06.349] _A4: 6816 ms
+
+[2025-10-14 11:00:06.355] [
+[2025-10-14 11:00:06.357] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='0' balance=90 RETURNING FALSE
+
+[2025-10-14 11:00:06.522] [
+[2025-10-14 11:00:06.525] SIG_CHECK] vote.voters.count(A5)=0, senderNodeID=A4, NODE_ID=A5
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-14 11:00:06.532] d
+[2025-10-14 11:00:06.535] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_14778_5597 ourBalance=105
+
+[2025-10-14 11:00:06.537] [SIG_OK] Signature created, length=88
+
+[2025-10-14 11:00:06.548] [
+[2025-10-14 11:00:06.549] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_14778_5597, nodeID=A5, format=VALID
+[2025-10-14 11:00:06.558] (
+[2025-10-14 11:00:06.561] 78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A5)
+[CONSENSUS_SLOT]
+[2025-10-14 11:00:06.568]  
+[2025-10-14 11:00:06.571] Node A5 assigned slot 2 at absolute time 24558 (current: 21807, wait: 2751ms)
+[SLOT_METRIC] vote_id=A4_14778_5597 slot
+[2025-10-14 11:00:06.578] =
+[2025-10-14 11:00:06.580] 2 scheduled_time=24558 wait_ms=2751 slot_interval=1330
+[ALG4.1] OnAssignMySlot: slot=1 (notification only - scheduling
+[2025-10-14 11:00:06.589]  
+[2025-10-14 11:00:06.590] done by consensus.cpp)
+[SIG_SCHEDULED] Vote A4_14778_5597 signature scheduled for slot 2 at time 24559 (wait: 2752ms)
+
+[2025-10-14 11:00:06.595] [
+[2025-10-14 11:00:06.596] CONSENSUS_STATE] Vote A4_14778_5597 signature count: 0 -> 2
+
+#[2025-10-14 11:00:08.084] heartbeat
+[2025-10-14 11:00:08.967] [
+[2025-10-14 11:00:08.970] LORA_RX_RAW] 78B opcode=0x7 RSSI=-29 from=œ73
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format=
+[2025-10-14 11:00:08.973] NEW(78B)
+[PKT_RX] Signature matched to vote: A4_14778_5597, from node: A3
+
+[2025-10-14 11:00:09.139] [
+[2025-10-14 11:00:09.142] CONSENSUS] BFT threshold reached (3/4) for  at 2778ms - starting perfect window for 4/4 (1000ms window)
+[PKT_RX] Signa
+[2025-10-14 11:00:09.145] t
+[2025-10-14 11:00:09.148] ure processed successfully: vote=A4_14778_5597, from=A3, total_voters=3
+
+[2025-10-14 11:00:09.151] [
+[2025-10-14 11:00:09.152] CONSENSUS_STATE] Vote A4_14778_5597 signature count: 2 -> 3
+
+[2025-10-14 11:00:09.157] [
+[2025-10-14 11:00:09.159] CONSENSUS_PERFORMANCE] Skipping heavy tasks - consensus active
+
+[2025-10-14 11:00:09.323] [
+[2025-10-14 11:00:09.328] SIG_TX] Sending scheduled signature for vote A4_14778_5597
+[TX_METRIC] vote_id=A4_14778_5597 scheduled=24559 actual=24559 error_ms=0 on_time=true
+
+[2025-10-14 11:00:09.336] [
+[2025-10-14 11:00:09.340] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_14778_5597, nodeID=A5, format=VALID
+[2025-10-14 11:00:09.346] (
+[2025-10-14 11:00:09.350] 78B)
+[PKT_TX] Transmitting binary signature packet: length=78 bytes, vote=A4_14778_5597, from=A5
+[QUEUE_DEBUG] Queuin
+[2025-10-14 11:00:09.357] g
+[2025-10-14 11:00:09.360]  TX: notBefore=24591, current=24595, delay=-6ms
+[LoRa] Binary packet queued (non-blocking)
+[PKT_TX] Binary signature 
+[2025-10-14 11:00:09.367] t
+[2025-10-14 11:00:09.372] ransmitted via LoRa
+[ALG4.1] Deadline reached for vote: A4_14778_5597
+[ALG4.1] Timeout on first attempt - FINISHING (
+[2025-10-14 11:00:09.377] r
+[2025-10-14 11:00:09.380] etry disabled)
+[ALG4.1] Timeout on retry attempt - GIVING UP
+[ALG4.1] FinalizeVotePublish: A4_14778_5597
+[ALG4.1] Fi
+[2025-10-14 11:00:09.387] n
+[2025-10-14 11:00:09.390] ishing vote: A4_14778_5597
+[DEADLINE_CLEANUP] Vote A4_14778_5597 removed
+[CLEANUP] Cleared vote state: A4_14778_5597
+#[2025-10-14 11:00:09.391] COM5 CLEANUP_COUNT=1
+[2025-10-14 11:00:09.393] 
+[CLEANUP] Reset vote indices: A4_14778_5597
+
+[2025-10-14 11:00:09.399] [
+[2025-10-14 11:00:09.400] TX_DEBUG] Sending packet: len=78 opcode=0x7 nodeID[21]=0xfa nodeID[22]=0xa4
+
+[2025-10-14 11:00:09.404] [
+[2025-10-14 11:00:09.406] LORA_QUEUE] TX started (non-blocking)
+
+[2025-10-14 11:00:10.137] [
+#[2025-10-14 11:00:10.139] heartbeat
+[2025-10-14 11:00:10.142] PERFECT_WINDOW_EXPIRED] Forcing 3/4 BFT consensus for A4_14778_5597
+
+[2025-10-14 11:00:10.266] [
+[2025-10-14 11:00:10.271] LORA_QUEUE] TX done at 25511 -> RX
+
+[2025-10-14 11:00:11.102] [
+[2025-10-14 11:00:11.105] CLEANUP_SKIP] Already cleaned: A4_14778_5597
+
+[2025-10-14 11:00:11.521] [
+[2025-10-14 11:00:11.525] LORA_RX_RAW] 78B opcode=0x7 RSSI=-24 from=179
+[PKT_RX] Binary signature received: length=78 bytes, opcode=0x7, format
+[2025-10-14 11:00:11.528] =
+[2025-10-14 11:00:11.532] NEW(78B)
+[PKT_RX] Signature matched to vote: A4_14778_5597, from node: A6
+
+[2025-10-14 11:00:11.694] [
+[2025-10-14 11:00:11.701] PERFECT_4_4]  finalized in 5330ms - participants: A3,A4,A5,A6,
+[PERFECT_CONSENSUS]  â€“ signatures: 4/4 | quorumType: 
+[2025-10-14 11:00:11.706] 0xf1
+[PKT_RX] Signature processed successfully: vote=A4_14778_5597, from=A6, total_voters=4
+
+[2025-10-14 11:00:11.709] [CONSENSUS_STATE] Vote A4_14778_5597 signature count: 3 -> 4
+
+#[2025-10-14 11:00:12.144] heartbeat
+#[2025-10-14 11:00:14.204] heartbeat
+[2025-10-14 11:00:14.763] L
+[2025-10-14 11:00:14.769] ORA_ACTIVITY: 7 packets/30s
+
+[2025-10-14 11:00:16.112] [
+[2025-10-14 11:00:16.118] CLEANUP_SKIP] Already cleaned: A4_14778_5597
+
+#[2025-10-14 11:00:16.246] heartbeat
+[2025-10-14 11:00:18.232] [
+[2025-10-14 11:00:18.243] LORA_RX_RAW] 120B opcode=0x2 RSSI=-36 from=A4
+[Binary] Processed vote from A4: A4_26697_6343
+[METRIC] event=vote_received,from=A4,vote_id=A4_26697_6343,timestamp_ms=
+#[2025-10-14 11:00:18.252] heartbeat
+[2025-10-14 11:00:18.255] 33472,lora_latency_ms=6775
+[ALG4.1] OnReceiveVoteInit: A4_26697_6343
+[ALG4.1] Starting vote: A4_26697_6343 deadline=43
+[2025-10-14 11:00:18.263] 4
+[2025-10-14 11:00:18.267] 72 (fallback)
+[ALG4.1] No active vote - setting as active
+[TIMING] LOCAL_PROCESSING_A4: 204 us
+[TIMING] LORA_LATENCY_A4: 6800 ms
+
+[2025-10-14 11:00:18.272] [
+[2025-10-14 11:00:18.276] PROTOCOL_DEBUG] shouldUse3PacketProtocol called - msg='1' balance=90 RETURNING FALSE
+
+[2025-10-14 11:00:18.389] [
+[2025-10-14 11:00:18.392] SIG_CHECK] vote.voters.count(A5)=0, senderNodeID=A4, NODE_ID=A5
+[SIG_CHECK] notVotedYet=TRUE, notOwnVote=TRUE, combine
+[2025-10-14 11:00:18.399] d
+[2025-10-14 11:00:18.402] =TRUE
+[SIG_CHECK] Entering signature creation block
+[SIG_DEBUG] About to create signature for vote A4_26697_6343 ourBalance=105
+
+[2025-10-14 11:00:18.406] [SIG_OK] Signature created, length=88
+
+[2025-10-14 11:00:18.415] [
+[2025-10-14 11:00:18.418] PKT_CREATE] Binary signature packet created: length=78 bytes, opcode=0x7, voteID=A4_26697_6343, nodeID=A5, format=VALID
+[2025-10-14 11:00:18.425] (
+[2025-10-14 11:00:18.427] 78B)
+[SIG_OK] Binary packet created successfully
+[SIG_PATH] isSource=NO (originNode=A4, NODE_ID=A5)
+[CONSENSUS_SLOT]
+[2025-10-14 11:00:18.435]  
+[2025-10-14 11:00:18.438] Node A5 assigned slot 2 at absolute time 36461 (current: 33660, wait: 2801ms)
+[SLOT_METRIC] vote_id=A4_26697_6343 slot
+[2025-10-14 11:00:18.446] =
+[2025-10-14 11:00:18.449] 2 scheduled_time=36461 wait_ms=2801 slot_interval=1330
+[ALG4.1] OnAssignMySlot: slot=1 (notification only - scheduling
+[2025-10-14 11:00:18.456]  
+[2025-10-14 11:00:18.460] done by consensus.cpp)
+[SIG_SCHEDULED] Vote A4_26697_6343 signature scheduled for slot 2 at time 36458 (wait: 2798ms)
+
+#[2025-10-14 11:00:20.278] heartbeat
+#[2025-10-14 11:00:22.332] heartbeat
+#[2025-10-14 11:00:24.391] heartbeat
+#[2025-10-14 11:00:26.393] heartbeat
+#[2025-10-14 11:00:28.453] heartbeat
+#[2025-10-14 11:00:30.514] heartbeat
+#[2025-10-14 11:00:32.561] heartbeat
+#[2025-10-14 11:00:34.623] heartbeat
+#[2025-10-14 11:00:36.675] heartbeat
+#[2025-10-14 11:00:38.730] heartbeat
+#[2025-10-14 11:00:40.786] heartbeat
+#[2025-10-14 11:00:42.843] heartbeat
+#[2025-10-14 11:00:44.900] heartbeat
+#[2025-10-14 11:00:46.950] heartbeat
+#[2025-10-14 11:00:49.006] heartbeat
+#[2025-10-14 11:00:51.064] heartbeat
+#[2025-10-14 11:00:53.127] heartbeat
+#[2025-10-14 11:00:55.189] heartbeat
+#[2025-10-14 11:00:57.245] heartbeat
+#[2025-10-14 11:00:59.299] heartbeat
+#[2025-10-14 11:01:01.349] heartbeat
+#[2025-10-14 11:01:03.399] heartbeat
+#[2025-10-14 11:01:05.459] heartbeat
+#[2025-10-14 11:01:07.520] heartbeat
+#[2025-10-14 11:01:09.523] heartbeat
+#[2025-10-14 11:01:11.586] heartbeat
+#[2025-10-14 11:01:13.586] heartbeat
+#[2025-10-14 11:01:15.648] heartbeat
+#[2025-10-14 11:01:17.704] heartbeat
+#[2025-10-14 11:01:19.763] heartbeat
+#[2025-10-14 11:01:21.767] heartbeat
+#[2025-10-14 11:01:23.829] heartbeat
+#[2025-10-14 11:01:25.888] heartbeat
+#[2025-10-14 11:01:27.945] heartbeat
+#[2025-10-14 11:01:30.005] heartbeat
+#[2025-10-14 11:01:32.067] heartbeat
+#[2025-10-14 11:01:34.129] heartbeat
+#[2025-10-14 11:01:36.186] heartbeat
+#[2025-10-14 11:01:38.241] heartbeat
+#[2025-10-14 11:01:40.303] heartbeat
+#[2025-10-14 11:01:41.651] COM5 session end
