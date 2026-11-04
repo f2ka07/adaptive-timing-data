@@ -97,9 +97,9 @@ Then regenerate figures with `make_results_figs_pdf.py` as above.
 
 ## Citation
 
-If you use this dataset, please cite the accompanying preprint:
+If you use this dataset, please cite the accompanying publication:
 
-> Kagai, F.; Branch, P.; But, J.; Allen, R. Adaptive Execution Timing for Offline First Quorum Coordination in LoRa Mesh Networks. *Preprints*, 2026. https://www.preprints.org/
+>  Kagai, F.; Branch, P.; But, J.; Allen, R. Adaptive Execution Timing for Offline First Quorum Coordination in LoRa Mesh Networks. Telecom 2026, 7, 123. https://doi.org/10.3390/telecom7050123
 
 ## License
 
